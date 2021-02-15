@@ -1,0 +1,35 @@
+body {
+  background-color: #f2cc8f;
+  font-family: 'Poppins', sans-serif;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 76px;
+  margin-block-end: 10px;
+  color: #3d405b;
+}
+
+p {
+  font-weight: 200;
+  font-size: 18px;
+  color: #3d405b;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 66vh;
+}
+
+@media (min-width: 768px) {
+  .text-container {
+    align-items: center;
+  }
+}

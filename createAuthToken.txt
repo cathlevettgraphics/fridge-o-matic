@@ -1,0 +1,52 @@
+/*********************
+ *
+ * UTILITY FUNCTIONS
+ *
+ *********************/
+
+// Helps us make ids
+function uuidv4() {
+  return 'xxxxxxxx-xxxx-xxxx-xxx-xxxxxxxxxxxx'.replace(/[x]/g, function (c) {
+    let r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+// IN CLOSURE
+// let currentCustomer = null;
+
+// create function to checkAuth
+// function checkAuth(token) {
+// return currentCustomer && currentCustomer.sessionToken === token;
+// }
+
+// IN LOGIN METHOD
+// Find the user and save in variable eg.
+// const customer = accounts.find((account) => account.PIN === PIN);
+
+// customer.sessionToken = uuidv4();
+
+// return customer.sessionToken;
+
+// https://codepen.io/cathlevettgraphics/pen/dyXBdQx?editors=0010
+
+// IN METHOD YOU WANT TO AUTHENTICATE
+// !! Check for token in methods
+// getBalance(token) {
+//       return checkAuth(token) ? currentCustomer.balance : undefined;
+// },
+// deposit(token, amount) {
+// !! Check for token in methods
+//       if (!checkAuth(token)) return;
+// }
+
+// IN TESTING
+// create login token by ...
+// const token = halifax.login(newCustomerData.PIN);
+
+// Add token to the method call
+// console.log('current balance: ', halifax.getBalance(token));
+
+// Halifax example
+// https://codepen.io/cathlevettgraphics/pen/dyXBdQx?editors=0010
